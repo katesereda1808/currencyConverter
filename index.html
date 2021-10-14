@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency converter</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./images/header.svg">
+    </header>
+    <main>
+
+            <h1>Конвертер валют онлайн</h1>
+
+        <div class="container">
+            <div class="have">
+                <p class="grey">У меня есть</p>
+               <div id="currencies1" class="currencies">
+                 <button data-type = 'RUB' class="currency grey active">RUB</button>
+                 <button data-type = 'USD' class="currency grey" >USD</button>
+                 <button data-type = 'EUR' class="currency grey">EUR</button>
+                 <button data-type = 'GBP' class="currency grey">GBP</button>
+                </div>
+                <div class="container2">
+                    <input class = "base" data-bool = "true" type="number" oninput="change_input(true)">
+                    <p class= "grey">1 <span class ="first"></span> = <span id="rate1"></span><span class ="second"></span></p>
+                </div>
+            </div>
+
+            <div class="want">
+                <p class="grey">Хочу приобрести</p>
+                <div id="currencies2" class="currencies">
+                    <button data-type = 'RUB' class="currency grey">RUB</button>
+                    <button data-type = 'USD' class="currency grey active">USD</button>
+                    <button data-type = 'EUR' class="currency grey">EUR</button>
+                    <button data-type = 'GBP' class="currency grey">GBP</button>
+                </div>
+                <div class="container2">
+                    <input class = "output" data-bool = "false" type="number" oninput="change_input(false)">
+                    <p class= "grey">1 <span class ="second"></span> = <span id="rate2"></span><span class ="first"></span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
